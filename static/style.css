@@ -1,0 +1,135 @@
+:root {
+  --bg: #f4f1ea;
+  --ink: #1c1917;
+  --muted: #57534e;
+  --line: #e7e0d6;
+  --accent: #1d4e4a;
+  --accent-hover: #163c39;
+  --card: #fffcf7;
+  --error: #9f1239;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.card {
+  width: min(440px, 100%);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 32px 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-family: system-ui, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.lede,
+.meta {
+  margin: 0 0 24px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.meta {
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+}
+
+.progress {
+  height: 4px;
+  margin: 0 0 20px;
+  background: var(--line);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
+.options {
+  display: grid;
+  gap: 10px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.options button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  text-align: left;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.options button:hover {
+  border-color: var(--accent);
+}
+
+.letter {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--bg);
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+form:not(.options) button {
+  width: 100%;
+  padding: 12px 16px;
+  color: #fff;
+  background: var(--accent);
+  border: 0;
+  border-radius: 10px;
+  font-family: system-ui, sans-serif;
+}
+
+form:not(.options) button:hover {
+  background: var(--accent-hover);
+}
+
+.error {
+  margin: 0 0 16px;
+  color: var(--error);
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+}

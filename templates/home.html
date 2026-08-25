@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}ShieleQuiz{% endblock %}
+{% block content %}
+  <p class="eyebrow">Genlayer community</p>
+  <h1>ShieleQuiz</h1>
+  <p class="lede">How well do you know the team? Identify the region each Genfren, mod, or teammate belongs to.</p>
+  <p class="meta">{{ total }} questions · A, B, C, or D</p>
+  <form method="post" action="{{ url_for('start') }}">
+    <button type="submit">Start quiz</button>
+  </form>
+{% endblock %}

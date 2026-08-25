@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Results · ShieleQuiz{% endblock %}
+{% block content %}
+  <p class="eyebrow">Quiz complete</p>
+  <h1>{{ score }} / {{ total }}</h1>
+  {% if score == total %}
+    <p class="lede">Perfect score. You know the community.</p>
+  {% elif score >= total // 2 %}
+    <p class="lede">Solid run. A few regions still to learn.</p>
+  {% else %}
+    <p class="lede">Keep going — the community is bigger than it looks.</p>
+  {% endif %}
+  <form method="post" action="{{ url_for('start') }}">
+    <button type="submit">Play again</button>
+  </form>
+{% endblock %}
